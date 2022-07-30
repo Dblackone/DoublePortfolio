@@ -3,16 +3,31 @@ body {
     background-color: aqua;
 }
 
-
+.intro-text {
+    text-align: center;
+}
 .choice-box {
+    display: flex;
+    align-items: center;
     background-color: bisque;
 }
-.portfolio{
-
+.container {
+    width: 25%;
+    margin: 2em 8em 2em 8em;
 }
-.portfolio-1{
+.container.img{
+    
+}
+.portfolio {
+    
+}
+.portfolio-1 {
+    text-align: center;
+    flex: 1;
     background-color: brown;
 }
-.portfolio-2{
+.portfolio-2 {
+    text-align: center;
+    flex: 1;
     background-color: greenyellow;
 }
