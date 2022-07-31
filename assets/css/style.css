@@ -1,75 +1,80 @@
 
-
-body {
-    height: 100%;
-    width: 100%;
-    background-image: linear-gradient(180deg, #11121a, #50550fad);
+*{
+    margin: 0;
+    padding: 0;
 }
 
-.intro-text {
-    text-align: center;
+/* Background animation */
+.animated-background{
+    width: 100% ;
+    height: 100vh;
+    background: linear-gradient(
+        to right, #833ab4,
+        #fd1d1d, #fcb045); 
+    background-size: 400% 400%;
+    animation: animate-background 10s infinite ease-in-out;
 }
-.choice-box {
+
+@keyframes animate-background {
+    0%{
+        background-position: 0 50%;
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+    100%{
+        background-position: 0 50%;
+    }
+}
+
+/* Background animation */
+
+
+/* Border animation */
+.card {
+    width: 200px;
+    height: 250px;
+    background-color: #151515;
+    border: 5px solid;
+    border-radius: 2em;
+    /* The border image property will work in a similar manner as a background image. This will allow us to use a gradient for the border. The '1' specifies the border width. In this case using a single value means stretch 100% across all corners. You are able to set up to 4 values corresponding to each corner. */
+    border-image:
+        linear-gradient(#ff512f,
+            #dd2476,
+            #1c64ff) 1;
+    animation: rotate 2.5s ease-in infinite;
+}
+
+/* Here we simply at a keyframe to animate the gradient. To do so, we add in the same gradient, the only difference is that now we rotate the gradient by 360 degrees.  */
+@keyframes rotate {
+    50% {
+        border-image:
+            linear-gradient(360deg,
+                #ff512f,
+                #dd2476,
+                #1c64ff) 1;
+    }
+}
+
+/* Protfolios grid container. */
+.choice-box{
     display: flex;
-    align-items: center;
+    padding: 4em 16em;
+    gap: 12em; /*Short-hand property for row-gap and column-gap. This will basically apply even space to create separation between the cards.*/
 }
-.container {
-    width: 25%;
-    margin: 2em 8em 2em 8em;
-}
-.container.img{
 
-}
-.portfolio {
-    
-}
-.portfolio-1 {
-    text-align: center;
+
+.portfolio-card-1,
+.portfolio-card-2{
     flex: 1;
-    background-color: brown;
-}
-.portfolio-2 {
     text-align: center;
-    flex: 1;
-    background-color: greenyellow;
 }
 
-/*Botton*/
-
-.cta {
-    display: flex;
-    align-items: center;
-    color: #fff;
-    background: none;
-    border: none;
-    padding: 12px 18px;
-    position: relative;
+.portfolio-card-1{
+    background-image: 
+} 
+.portfolio-card-2{
+    background-image: ;
 }
 
-.cta:before {
-    content: "";
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%) translateX(calc(100% + 4px));
-    width: 45px;
-    height: 45px;
-    background: #dc143c;
-    border-radius: 50px;
-    transition: transform .25s .25s cubic-bezier(0, 0, .5, 2), width .25s cubic-bezier(0, 0, .5, 2);
-    z-index: -1;
-}
 
-.cta:hover::before {
-    width: 100%;
-    transform: translateY(-50%) translateX(-18px);
-    transition: transform .25s cubic-bezier(0, 0, .5, 2), width .25s .25s cubic-bezier(0, 0, .5, 2);
-}
-
-.cta i {
-    margin-left: 5px;
-    transition: transform .25s .4s cubic-bezier(0, 0, .5, 2);
-}
-
-.cta:hover i {
-    transform: translateX(3px);
-}

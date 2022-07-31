@@ -7,35 +7,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="/assets/TextVideoMask/styles.css">
+    
 </head>
 <body>
     <!--homepage contianer-->
-    <div>
+    <div class="animated-background">
     <!--welcome sextion-->
-        <section class="intro-text">
-            <div>
-                <h1>WELCOME</h1>
-                <p>Who would you like to meet</p>
-            </div>
-        </section>
+        <div>
+            <section class="showcase">
+                <video src="assets/TextVideoMask/images/video.mp4" autoplay loop muted></video>
+                <h1 class="title">WELCOME</h1>
+            </section>
+        </div>
     <!--section to choose portfolio-->
-        <section class="portfolio">
+        <section class="">
             <div class="choice-box">
     <!--Constrution portfolio-->
-                <div class="container portfolio-1">
-                    <img src="/assets/images/1.jpg" alt="" class="" width="80%">
-                    <h2>Vollmann the builder</h2>
-                    <button class="cta">
-                        <a href="">Visit</a>
-                    </button>  
+                <div class="card portfolio-card-1">
+                    <h2>Vollmann the builder</h2> 
                 </div>
     <!--Tech portfolio-->
-                <div class="container portfolio-2">
-                    <img src="/assets/images/2.JPG" alt="" class="" width="80%">
+                <div class="card portfolio-card-2">
                     <h2>Vollmann the tech guy</h2>
-                    <button>
-                        <a href="">Visit</a>
-                    </button>
                 </div>
             </div>
         </section>
