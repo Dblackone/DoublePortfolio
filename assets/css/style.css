@@ -1,18 +1,126 @@
 
+*{
+    margin: 1em;
+    padding: 0;
+}
+
 body {
-    background-color: aqua;
+    background-color: black;
 }
 
+/* Background animation 
+.animated-background{
+    width: 100% ;
+    height: 100vh;
+    background: linear-gradient(
+        to right, black,
+        rgba(53, 52, 52, 0.425),
+        rgba(100, 97, 97, 0.767)); 
+    background-size: 400% 400%;
+    animation: animate-background 10s infinite ease-in-out;
+}
 
-.choice-box {
-    background-color: bisque;
+@keyframes animate-background {
+    0%{
+        background-position: 0 50%;
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+    100%{
+        background-position: 0 50%;
+    }
 }
-.portfolio{
 
+/* Background animation */
+.text{
+    color: white;
+    text-align: center;
 }
-.portfolio-1{
-    background-color: brown;
+
+/* Protfolios grid container. */
+.choice-box{
+    border: solid 2px white;
+    margin: 0 12em;
+    display: flex;
+    padding: 0.5em 4em;
+    gap: 4em; /*Short-hand property for row-gap and column-gap. This will basically apply even space to create separation between the cards.*/
 }
-.portfolio-2{
-    background-color: greenyellow;
+.portfolio-card-1,
+.portfolio-card-2{
+    width: ;
+    height: 60vh;
+    flex: 1;
+    border: solid 2px white;
+    text-align: center;
+}
+.portfolio-card-1{
+    background-image: ;
+} 
+.portfolio-card-2{
+    background-image: ;
+}
+
+/* Button */
+.button{
+    text-decoration: none;
+    font-size: 12px;
+    color: white;
+    padding: 10px 25px;
+    border: 3px solid white;
+    position: relative;
+    top: 45%;
+    transform: translate(-50%, -50%);
+}
+.button::before,
+.button::after{
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border: inherit;
+    transition: all .5s ease-in;
+}
+.button::before{
+    top: -15px;
+    left: -15px;
+    border-width: 3px 0 0 3px;
+}
+.button::after{
+    bottom: -15px;
+    right: -15px;
+    border-width: 0 3px 3px 0;
+}
+.button:hover::before,
+.button:hover::after{
+    width: calc(100% + 27px);
+    height: calc(100% + 27px);
+}
+
+/* Button */
+@media (max-width:450px) {
+    *{
+        margin: 8px;
+        padding: 0;
+    }
+    
+    /* Protfolios grid container. */
+    .choice-box{
+        display: block;
+        border: solid 2px white;
+        margin: 0;
+        padding: 1px 4px; /*Short-hand property for row-gap and column-gap. This will basically apply even space to create separation between the cards.*/
+    }
+    .portfolio-card-1,
+    .portfolio-card-2{
+        height: 45vh;
+        border: solid 2px white;
+        text-align: center;
+    }
+    .portfolio-card-1{
+        background-image: ;
+    } 
+    .portfolio-card-2{
+        background-image: ;
+    }
 }
